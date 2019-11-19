@@ -14,6 +14,6 @@ SELECT costumerName,quantityPurshased FROM purchases WHERE purchaseID IN (SELECT
 
 SELECT itemName, purchases.quantityPurshased FROM inventory INNER JOIN transactions ON inventory.itemID=transactions.itemID INNER JOIN purchases ON transactions.purchaseID=purchases.purchaseID;
 
-SELECT costumerName,quantityPurshased FROM purchases INNER JOIN transactions ON purchases.purshaseID=transactions.purchaseID WHERE quantityPurshased>10;
+SELECT costumerName,quantityPurshased FROM purchases INNER JOIN transactions ON purchases.purchaseID=transactions.purchaseID WHERE quantityPurshased>10;
 
 SELECT itemName,quantity FROM inventory INNER JOIN transactions ON inventory.itemID=transactions.itemID WHERE quantity>30;
